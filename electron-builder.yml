@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: guji-image-merge
+productName: guji-image-merge-1
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: guji-image-merge
+  executableName: guji-image-merge-1
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
