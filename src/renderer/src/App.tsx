@@ -329,14 +329,16 @@ function App(): JSX.Element {
   }, [selectedImages])
 
   return (
-    <Layout className="layout">
-      <Header>
+    <Layout className="h-screen layout">
+      <Header id="header" className="bg-white">
         <Menu
+          id="menu"
           onClick={onUpload}
           mode="horizontal"
           items={menuItems}
           selectable={false}
           triggerSubMenuAction="click"
+          className="w-full border-none"
         />
       </Header>
       <Layout>

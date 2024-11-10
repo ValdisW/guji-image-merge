@@ -10,7 +10,12 @@ function createWindow(): void {
     height: 670,
     show: false,
     autoHideMenuBar: true,
-    titleBarStyle: 'customButtonsOnHover',
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#fff',
+      height: 35,
+      symbolColor: '#000'
+    },
     // frame: false,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
@@ -70,9 +75,9 @@ app.on('ready', () => {
         ...details.responseHeaders,
         'Content-Security-Policy': [
           "default-src 'self'; " +
-          "img-src 'self' blob: data:; " +
-          "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
-          "style-src 'self' 'unsafe-inline';"
+            "img-src 'self' blob: data:; " +
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+            "style-src 'self' 'unsafe-inline';"
         ]
       }
     })

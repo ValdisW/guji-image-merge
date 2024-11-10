@@ -1,3 +1,57 @@
-.layout {
+/* .layout {
   height: 100%;
+} */
+
+.layout {
+  min-height: 100vh;
+}
+
+.ant-layout-header {
+  line-height: 48px;
+  padding: 0 16px;
+}
+
+.ant-menu-horizontal {
+  line-height: 46px;
+}
+
+.canvas-container {
+  position: relative;
+  margin: 20px;
+}
+
+.crop-overlay {
+  position: absolute;
+  border: 2px dashed #1890ff;
+  pointer-events: none;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#header {
+  /* titlebar behavior on windows */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+#menu > li {
+  -webkit-app-region: no-drag;
 }
